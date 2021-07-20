@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/editMinutes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/stopwatch_item" />
+
+
+    <Button
+        android:id="@+id/add_new_stopwatch_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Add Timer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editMinutes"
+        android:layout_width="160dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Minutes"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintBottom_toTopOf="@+id/add_new_stopwatch_button"
+        app:layout_constraintEnd_toEndOf="@+id/add_new_stopwatch_button"
+        app:layout_constraintStart_toStartOf="@+id/add_new_stopwatch_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
